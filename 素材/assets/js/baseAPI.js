@@ -9,7 +9,7 @@ $.ajaxPrefilter(function(options){
     }
 
     options.complete=function(res){
-        console.log(res);
+       
         if(res.responseJSON.status===1 && res.responseJSON.message==='身份认证失败！'){
             localStorage.removeItem('token')
             location.href='/04-四阶段：前后端交互阶段资料新/项目一大事件/login.html';

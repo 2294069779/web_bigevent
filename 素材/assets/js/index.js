@@ -22,12 +22,15 @@ function getUserInfo(){
                 return layer.msg(res.message);
             }
             readerAvatar(res.data)
+          
         }
        
     })
 }
 function readerAvatar(user){
-        var name1=user.nikename || user.username
+         
+        var name1=user.nickname || user.username
+       
         $('#welcome').html('欢迎&nbsp;&nbsp'+name1)
         if(user.user_pic !==null){
             $('.layui-nav-img').attr('src',user.user_pic).show();
